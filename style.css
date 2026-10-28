@@ -1,0 +1,431 @@
+/* ===================================================
+   VARIÁVEIS CSS — PALETA DE CORES E TIPOGRAFIA
+=================================================== */
+:root {
+  --color-blush: #E8B8C5;
+  --color-soft-rose: #F7E8ED;
+  --color-offwhite: #FFFCFA;
+  --color-nude: #D8B9AD;
+  --color-graphite: #29252A;
+  --color-gold: #C5A16B;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+/* ===================================================
+   ESTILOS GERAIS
+=================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-graphite);
+  background-color: var(--color-offwhite);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.max-w-700 { max-width: 700px; }
+.max-w-400 { max-width: 400px; }
+.smaller { font-size: 0.75rem; }
+
+.bg-soft-rose { background-color: var(--color-soft-rose); }
+.bg-offwhite { background-color: var(--color-offwhite); }
+.text-blush { color: var(--color-blush); }
+.text-gold { color: var(--color-gold); }
+.border-blush { border-color: var(--color-blush) !important; }
+.border-gold { border-color: var(--color-gold) !important; }
+
+.section-padding {
+  padding: 80px 0;
+}
+
+/* ===================================================
+   CABEÇALHO & LOGÓTIPO
+=================================================== */
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-graphite);
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-graphite);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-gold);
+}
+
+/* ===================================================
+   BOTÕES PERSONALIZADOS
+=================================================== */
+.btn-brand-primary {
+  background-color: var(--color-blush);
+  color: var(--color-graphite);
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid var(--color-blush);
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-brand-primary:hover {
+  background-color: #dfaab8;
+  color: var(--color-graphite);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 184, 197, 0.4);
+}
+
+.btn-outline-brand {
+  border: 1.5px solid var(--color-blush);
+  color: var(--color-graphite);
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+  background-color: var(--color-soft-rose);
+  color: var(--color-graphite);
+  border-color: var(--color-blush);
+}
+
+/* ===================================================
+   HERO SECTION
+=================================================== */
+.hero-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-soft-rose) 100%);
+}
+
+.badge-location {
+  background-color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-blush);
+  color: var(--color-graphite);
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--color-graphite);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.hero-image-wrapper {
+  max-width: 480px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 25px;
+  left: -20px;
+  border: 1px solid var(--color-soft-rose);
+  animation: floatUp 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+/* ===================================================
+   SEÇÃO SOBRE
+=================================================== */
+.sub-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-graphite);
+}
+
+.section-desc {
+  color: #666;
+  font-size: 1.05rem;
+}
+
+.quote-box {
+  background-color: #FFFFFF;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-graphite);
+}
+
+/* ===================================================
+   PROCEDIMENTOS & CARDS
+=================================================== */
+.procedure-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #FFFFFF;
+}
+
+.procedure-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(41, 37, 42, 0.08) !important;
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.procedure-card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.badge-service {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-graphite);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ===================================================
+   LASER DAY
+=================================================== */
+.laser-day-section {
+  background-color: var(--color-graphite);
+}
+
+.laser-badge {
+  display: inline-block;
+  background-color: rgba(197, 161, 107, 0.2);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.laser-title {
+  color: #FFFFFF;
+}
+
+.laser-desc {
+  color: #DDD;
+  font-size: 1.05rem;
+}
+
+.btn-laser-cta {
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+}
+
+.btn-laser-cta:hover {
+  background-color: #b08d58;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   DIFERENCIAIS
+=================================================== */
+.diff-card {
+  transition: transform 0.3s ease;
+}
+
+.diff-card:hover {
+  transform: translateY(-5px);
+}
+
+.diff-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--color-soft-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-size: 1.5rem;
+}
+
+/* ===================================================
+   DEPOIMENTOS & GALERIA
+=================================================== */
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-soft-rose);
+  color: var(--color-graphite);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-text {
+  font-size: 0.98rem;
+  font-style: italic;
+  color: #444;
+}
+
+.gallery-item {
+  height: 200px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+/* ===================================================
+   RODAPÉ
+=================================================== */
+.footer-custom {
+  background-color: var(--color-graphite);
+}
+
+.brand-footer {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-link:hover {
+  color: var(--color-blush);
+  padding-left: 4px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--color-blush);
+  color: var(--color-graphite);
+}
+
+/* ===================================================
+   BOTÃO FLUTUANTE DE WHATSAPP
+=================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 58px;
+  height: 58px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #20BA5A;
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* ===================================================
+   ANIMAÇÕES DE ENTRADA SUAVES (OBSERVER)
+=================================================== */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
